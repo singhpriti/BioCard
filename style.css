@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css? family=poppins:300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow: hidden;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1d1d25;
+}
+section::before{
+    content: '';
+    position: absolute; 
+    top: 20%;
+    left: 55%;
+    width: 350px ;
+    height: 350px;
+    background: linear-gradient(rgb(118, 180, 250), rgb(82, 163, 240));
+    border-radius: 50%;
+}
+.mini{
+    content: '';
+    position: absolute; 
+    bottom: 22%;
+    left: 550px;
+    width: 250px ;
+    height: 250px;
+    background: linear-gradient(rgb(36, 128, 233), rgb(38, 140, 236));
+    border-radius: 50%;
+
+}
+.card{
+    position: relative;
+    width: 650px;
+    height: 400px;
+    transform-style:preserve-3d ;
+    perspective: 500px;
+}
+.card .face{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    border-radius: 20px;
+    background: rgba(127, 198, 245, 0.1);
+    backdrop-filter: blur(10px);
+    transform-style: preserve-3d;
+    transform: 1s;
+
+}
+.card .face.front::before{
+ content: '';
+ position: absolute;
+ bottom: 40px;
+ right: 40px;
+ width: 60px;
+ height: 60px;
+ background:#fff ;
+ border-radius: 50%;    
+ opacity: 0.3;
+
+}
+.card .face.front::after{
+    content: '';
+    position: absolute;
+    bottom: 40px;
+    right: 70px;
+    width: 60px;
+    height: 60px;
+    background:#fff ;
+    border-radius: 50%;    
+    opacity: 0.5;
+   
+   }
+   .card .face.front .Name{
+     position: absolute;
+     left: 40px;
+     bottom: 90px;
+     color: #fff;
+     font-weight: 500;  
+     text-shadow: 0 2px 1px #0005;
+     font-family: "Times New Roman", Times, serif;
+     font-size: 25px;
+   }
+   .card .face.front .Email{
+    position: absolute;
+    left: 40px;
+    bottom: 50px;
+    color: #fff;
+    font-weight: 500;  
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 1px #0005;
+    font-size: 25px;
+  }
+
+  .card .face.front .Number{
+    position: absolute;
+    left: 40px;
+    bottom: 130px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;  
+    letter-spacing: 6px;
+    text-shadow: 0 2px 1px #0005;
+    font-family: 'Orbitron',sans-serif;
+  }
+  .card .face.front .img{
+    position: absolute;
+    max-width: 64px;
+    left: 50px;
+    top: 60px;
+    box-shadow: 0 2px 1px rgba(129, 207, 243, 0.333);
+  }
